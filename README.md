@@ -1,17 +1,56 @@
-# React + TypeScript + Vite
+# Connect Four Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A classic Connect Four game built with React, TypeScript, and Vite. Drop your colored discs and try to connect four in a row to win!
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Two-player gameplay (Red vs Yellow)
+- Win detection for horizontal, vertical, and diagonal connections
+- Draw detection when the board is full
+- Visual column preview on hover
+- Reset button to start a new game
+- Responsive grid layout
 
-## React Compiler
+## How to Play
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+1. Players take turns dropping colored discs into columns
+2. Click on a column to drop your disc
+3. The disc falls to the lowest available position in that column
+4. Connect four discs horizontally, vertically, or diagonally to win
+5. If the board fills up with no winner, the game ends in a draw
 
-Note: This will impact Vite dev & build performances.
+## Getting Started
+
+Install dependencies:
+```bash
+npm install
+```
+
+Run the development server:
+```bash
+npm run dev
+```
+
+Build for production:
+```bash
+npm run build
+```
+
+## Tech Stack
+
+- React 18 with TypeScript
+- Vite for fast development and building
+- CSS for styling
+
+## Game Configuration
+
+You can customize the game by modifying these constants in `src/App.tsx`:
+
+- `ROWS`: Number of rows in the grid (default: 6)
+- `COLS`: Number of columns in the grid (default: 7)
+- `COUNT_TO_WIN`: Number of consecutive discs needed to win (default: 4)
+- `PLAYER_TOKENS`: Colors for each player
+
 
 ## Expanding the ESLint configuration
 
